@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+<variable
+    name="viewmodel"
+    type="com.example.recipebook.home.HomeViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeFragment"
+    android:background="#E5E5E5">
+
+
+    <TextView
+        android:id="@+id/welcome_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginBottom="638dp"
+        android:text="Welcome David"
+        android:textColor="#010205"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_avatar_one" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="127dp"
+        app:cardCornerRadius="30dp"
+        android:layout_marginBottom="-10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/recipes_card_view"
+            android:layout_width="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="104dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="1sp"
+                android:text="Recipes"
+                android:textColor="#096B91"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/recipes_icon"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="37dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_vectorrecipes" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chats_card_view"
+            android:layout_width="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="130dp"
+            android:layout_height="104dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="1sp"
+                android:text="Chats"
+                android:textColor="#096B91"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/chats_icon"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="23dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_iconchat" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/networks_card_view"
+            android:layout_width="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="240dp"
+            android:layout_height="104dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="1sp"
+                android:text="Networks"
+                android:textColor="#096B91"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/networks_icon"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_iconnetwork" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friends_card_view"
+            android:layout_width="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="162dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="104dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="1sp"
+                android:text="Friends"
+                android:textColor="#096B91"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/friends_icon"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="31dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_iconfriends" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favourites_card_view"
+            android:layout_width="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="162dp"
+            android:layout_marginStart="130dp"
+            android:layout_height="104dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="1sp"
+                android:text="Favourites"
+                android:textColor="#096B91"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/favourites_icon"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="31dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_iconfavourites" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/uploads_card_view"
+            android:layout_width="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            android:layout_marginTop="162dp"
+            android:layout_marginStart="240dp"
+            android:layout_height="104dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="28dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="1sp"
+                android:text="Uploads"
+                android:textColor="#096B91"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/uploads_icon"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_iconuploads" />
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="300dp"
+            android:background="?android:attr/listDivider" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Notifications"
+    android:layout_marginTop="320dp"
+    android:layout_marginStart="20dp"
+    android:textSize="16sp"
+    android:textColor="#34A853"
+    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="clear notifications"
+            android:layout_marginTop="320dp"
+            android:layout_marginStart="223dp"
+            android:textSize="12sp"
+            android:textColor="#B4C2D3"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notification_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="260dp"
+            app:notificationData="@{viewmodel.notificationData}"
+            tools:listitem="@layout/notification_recycler_item_view" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
