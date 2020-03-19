@@ -26,9 +26,16 @@
         <action
             android:id="@+id/action_homeFragment_to_recipeFragment"
             app:destination="@id/recipeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/recipeFragment"
         android:name="com.example.recipebook.recipe.RecipeFragment"
         android:label="RecipeFragment" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.recipebook.chats.ChatFragment"
+        android:label="ChatFragment" />
 </navigation>
