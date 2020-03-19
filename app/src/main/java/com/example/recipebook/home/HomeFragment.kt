@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.recipebook.databinding.HomeFragmentBinding
 
@@ -16,12 +17,13 @@ class HomeFragment : Fragment() {
     }
 
     private lateinit var viewModel: HomeViewModel
+    private lateinit var binding: HomeFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = HomeFragmentBinding.inflate(inflater)
+        binding = HomeFragmentBinding.inflate(inflater)
         binding.lifecycleOwner = this
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         binding.viewmodel = viewModel
@@ -32,7 +34,10 @@ class HomeFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        // TODO: Use the ViewModel
+        binding.recipesCardView.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToRecipeFragment())
+        }
+
     }
 
 }
