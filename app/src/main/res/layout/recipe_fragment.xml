@@ -37,7 +37,7 @@
         app:titleTextColor="@android:color/transparent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/search_friends_card_view"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="20dp"
@@ -66,7 +66,7 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/search_friends_card_view"
         app:layout_constraintEnd_toEndOf="@+id/recipe_background_image"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/recipe_background_image"

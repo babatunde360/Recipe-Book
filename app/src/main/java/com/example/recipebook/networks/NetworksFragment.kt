@@ -1,4 +1,4 @@
-package com.example.recipebook.friends
+package com.example.recipebook.networks
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,30 +8,30 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.recipebook.databinding.FriendsFragmentBinding
-import kotlinx.android.synthetic.main.friends_fragment.*
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.recipebook.databinding.NetworksFragmentBinding
+import kotlinx.android.synthetic.main.networks_fragment.*
 
-class FriendsFragment : Fragment() {
+
+class NetworksFragment : Fragment() {
 
     companion object {
-        fun newInstance() = FriendsFragment()
+        fun newInstance() = NetworksFragment()
     }
 
-    private lateinit var viewModel: FriendsViewModel
+    private lateinit var viewModel: NetworksViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FriendsFragmentBinding.inflate(inflater)
-        binding.lifecycleOwner = this
-        viewModel = ViewModelProvider(this).get(FriendsViewModel::class.java)
-        binding.viewModel = viewModel
-binding.friendsRecyclerView.apply {
-    adapter = FriendAdapter()
-    layoutManager = LinearLayoutManager(context)
-}
+        val binding = NetworksFragmentBinding.inflate(inflater)
+        viewModel = ViewModelProvider(this).get(NetworksViewModel::class.java)
+        binding.viewmodel = viewModel
+        binding.networksRecyclerView.apply {
+            adapter = NetWorkAdapter()
+            layoutManager = GridLayoutManager(context,2)
+        }
 
         return binding.root
     }

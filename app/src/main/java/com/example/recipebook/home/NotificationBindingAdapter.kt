@@ -7,6 +7,8 @@ import com.example.recipebook.friends.FriendAdapter
 import com.example.recipebook.model.Chat
 import com.example.recipebook.model.Friend
 import com.example.recipebook.model.Notification
+import com.example.recipebook.model.Product
+import com.example.recipebook.networks.NetWorkAdapter
 import com.example.recipebook.recipe.RecipeAdapter
 
 @BindingAdapter("notificationData")
@@ -28,5 +30,11 @@ fun bindChatRecyclerView(rv:RecyclerView,data:List<Chat>){
 @BindingAdapter("friendData")
 fun bindFriendRecyclerView(rv:RecyclerView, data:List<Friend>){
     val adapter = rv.adapter as FriendAdapter
+    adapter.submitList(data)
+}
+
+@BindingAdapter("networkData")
+fun bindNetworkRecyclerView(rv:RecyclerView, data: List<Product>){
+    val adapter = rv.adapter as NetWorkAdapter
     adapter.submitList(data)
 }
