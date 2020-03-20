@@ -41,6 +41,9 @@ class HomeFragment : Fragment() {
         binding.chatsCardView.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_chatFragment)
         }
+        binding.friendsCardView.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_friends)
+        }
 
     }
 

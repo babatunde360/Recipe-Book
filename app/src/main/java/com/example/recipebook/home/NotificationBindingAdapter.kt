@@ -3,7 +3,9 @@ package com.example.recipebook.home
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recipebook.chats.ChatAdapter
+import com.example.recipebook.friends.FriendAdapter
 import com.example.recipebook.model.Chat
+import com.example.recipebook.model.Friend
 import com.example.recipebook.model.Notification
 import com.example.recipebook.recipe.RecipeAdapter
 
@@ -21,5 +23,10 @@ val adapter = recyclerView.adapter as RecipeAdapter
 @BindingAdapter("chatData")
 fun bindChatRecyclerView(rv:RecyclerView,data:List<Chat>){
     val adapter = rv.adapter as ChatAdapter
+    adapter.submitList(data)
+}
+@BindingAdapter("friendData")
+fun bindFriendRecyclerView(rv:RecyclerView, data:List<Friend>){
+    val adapter = rv.adapter as FriendAdapter
     adapter.submitList(data)
 }
