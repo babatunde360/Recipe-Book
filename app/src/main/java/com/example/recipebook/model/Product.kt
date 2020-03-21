@@ -1,3 +1,3 @@
 package com.example.recipebook.model
 
-data class Product(val url: String, val title: String)
+data class Product(val url: Int, val title: String)

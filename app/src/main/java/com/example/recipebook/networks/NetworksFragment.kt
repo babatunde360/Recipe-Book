@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.recipebook.MarginItemDecoration
 import com.example.recipebook.databinding.NetworksFragmentBinding
 import kotlinx.android.synthetic.main.networks_fragment.*
 
@@ -31,6 +32,7 @@ class NetworksFragment : Fragment() {
         binding.networksRecyclerView.apply {
             adapter = NetWorkAdapter()
             layoutManager = GridLayoutManager(context,2)
+            addItemDecoration(MarginItemDecoration(10))
         }
 
         return binding.root

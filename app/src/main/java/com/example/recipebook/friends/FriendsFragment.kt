@@ -31,6 +31,7 @@ class FriendsFragment : Fragment() {
 binding.friendsRecyclerView.apply {
     adapter = FriendAdapter()
     layoutManager = LinearLayoutManager(context)
+
 }
 
         return binding.root
