@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
+    android:label="Favourites"
     app:startDestination="@id/loginFragment">
 
 
@@ -32,6 +33,9 @@
         <action
             android:id="@+id/action_homeFragment_to_networksFragment"
             app:destination="@id/networksFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
     </fragment>
     <fragment
         android:id="@+id/recipeFragment"
@@ -49,4 +53,8 @@
     <fragment
         android:id="@+id/networksFragment"
         android:name="com.example.recipebook.networks.NetworksFragment" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.recipebook.favourite.FavouriteFragment"
+        android:label="FavouriteFragment" />
 </navigation>

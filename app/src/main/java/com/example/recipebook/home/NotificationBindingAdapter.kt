@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.recipebook.chats.ChatAdapter
+import com.example.recipebook.favourite.FavouriteAdapter
 import com.example.recipebook.friends.FriendAdapter
 import com.example.recipebook.model.Chat
 import com.example.recipebook.model.Friend
@@ -36,6 +37,11 @@ fun bindFriendRecyclerView(rv:RecyclerView, data:List<Friend>){
     val adapter = rv.adapter as FriendAdapter
     adapter.submitList(data)
 }
+@BindingAdapter("favouriteData")
+fun bindFavouriteRecyclerView(rv:RecyclerView, data:List<Product>){
+    val adapter = rv.adapter as FavouriteAdapter
+    adapter.submitList(data)
+}
 
 @BindingAdapter("networkData")
 fun bindNetworkRecyclerView(rv:RecyclerView, data: List<Product>){
@@ -53,6 +59,7 @@ fun bindImage(imageView: ImageView, imageUrl: Int?){
             .into(imageView)
     }
 }
+
 @BindingAdapter("networkImage")
 fun bindNetworkImage(imageView: ImageView, imageUrl: Int?){
     imageUrl?.let{
